@@ -1,0 +1,48 @@
+@import 'header';
+/*U can cut of parts to other files and import here to organize*/
+/*Media screen size adjustment using mixins*/
+@mixin mobileScreen { 
+    @media only screen and (max-width:600px) {@content;}
+}
+@mixin tabletScreen {
+    @media only screen and (min-width:950px) {@content;} 
+}
+
+$primaryColor: #ec7705;
+nav {
+    ul {padding: 0;margin: 0;}
+    li {list-style: none; float: left;margin-right: 10px;
+        @include mobileScreen {float: none; margin-bottom: 3px;
+        margin-right: 0};
+        @include tabletScreen {margin-right: 20px;} }
+    a {display: block; padding: 10px;
+        background-color: $primaryColor;
+        color: #FFF; text-decoration: none;}
+}
+.group::after {
+    content: "";
+    clear: both;
+    display: table;
+  } /*This code is copied from the internet, it helps cut the block floating :)*/
+
+  @mixin verticalGradient($fromColor, $toColor) {
+	background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(to bottom, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+} /*This mixin code is copied from the course, lesson no.67. For later use.
+let's copy this code to other file and when needed, just import it*/  
+
+  .btn-a {
+a {text-decoration: none;color: $primaryColor;}
+padding: 5px; 
+border: 1px solid $primaryColor;
+border-radius: 5px;display: inline-block;}
+
+.btn-b {
+    @extend .btn-a;
+    @include verticalGradient(white,orange);}

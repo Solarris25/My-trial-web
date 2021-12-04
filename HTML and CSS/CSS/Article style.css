@@ -1,0 +1,326 @@
+html {
+    background-color: #f1ce6b;}
+header {
+    margin: 0;padding: 40px 40px;
+    background: #FFF url(../images/Web\ cover\ 1.jpg) top no-repeat;
+    /*We can add in mutiple backgrounds using commas ,*/
+    background-position: top; 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #fcba03;
+    background-color: #fcba03;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:95%; margin: 0;
+}
+p {text-align: justify;}
+.white-box {
+    padding: 50px 40px;
+    margin-left: auto; margin-right: auto;
+    max-width: 1000px; background: #FFF;}
+img {width: 100%;}
+/*Customized fonts*/
+@font-face {
+    font-family: 'OtsrichSans';
+    src: url('fonts/ostrich-sans/OstrichSans-Bold.woff') format('woff'),
+    url('fonts/ostrich-sans/OstrichSans-Bold.svg') format('svg'),
+    url('fonts/ostrich-sans/OstrichSans-Bold.ttf') format('truetype');
+    font-weight: bold; font-style: normal;
+}
+/*Ends Fonts*/
+
+/*Header cover here*/
+ h1 {
+    color:#fcba03; text-align: left; font-family: 'OtsrichSans';
+font-size:350%; margin-bottom: 0; animation: SlideDown 1s;
+}
+header p {
+    margin-bottom: 30px; padding-top: 0; color: #FFF; font-size: 100%;
+animation: SlideDown 1s;
+}
+
+.site-nav {
+    margin-top: 20px; 
+}
+.toggle-btn {display: none;color: #FFF;}
+
+.site-nav ul {
+    margin: 0; padding: 0;
+}
+.site-nav li {
+    list-style-type: none; float: left;
+    margin-right: 10px;
+}
+.site-nav a {
+    display: block;
+    text-decoration: none; 
+    padding: 10px 20px;
+    border: 2px solid #fcba03;
+    border-bottom: none;
+    color: #fcba03;
+    background-color: rgba(0,0,0, .40);transition-property: color, background-color;
+    transition-duration: 1s;
+}
+.site-nav a:hover {
+    background-color: #fcba03; color: white;
+    transition-property: color, background-color;
+}
+/* End header cover nav */
+
+/*Icons nav*/
+.icons {
+    margin-top: -30px; 
+}
+.icons ul {
+    margin: 0; padding: 0;
+}
+.icons li {
+    list-style: none; float: left;  
+    margin-right: 30px;
+}
+.icons a{
+    display: block; text-decoration: none;
+    width: 40px; height: 40px;
+    background-position: top left;
+    background-image: url(../images/icons-01.png);
+    text-indent: -9999px; 
+    background-repeat: no-repeat; 
+}
+.icon-home a {background-position: 0 0;}
+.icon-home a:hover {background-position: -40px 0;}
+.icon-setting a {background-position: 0 -40px;}
+.icon-setting a:hover {background-position: -40px -40px;}
+.icon-contact a {background-position: 0 -80px;}
+.icon-contact a:hover {background-position: -40px -80px;}
+/*Ends icons nav*/
+
+.stupid-article {
+    color:gray; text-align: center; font-family: 'OtsrichSans';
+    padding: 40px 0; font-size:250%; margin-top: 30px;
+    animation: SlideDown 1s;}
+
+/*image banner here*/
+.image-banner {margin-bottom: 40px;}
+.banner-description img {display: block;width: 100%;transition: all 1s;}
+.image-banner:hover img {transform:scale(1.3);}
+.banner-description {float: left; width: 50%; ;overflow: hidden;}
+.slide {position:relative;}
+.slide-text {color: white;background-color: rgba(0, 0, 0, 0.7); 
+    padding: 15px 15px; position: absolute; 
+    width: 100%; box-sizing: border-box;
+    bottom: 0; left:0;margin: 0; 
+    opacity: 0; transform: translateY(100%);
+    transition: all .5s;}
+.image-banner:hover .slide-text {transform: translateY(0); 
+    opacity: 1;}    
+.corgi-post {float: left; width: 45%; padding-left: 20px;}
+
+    /*Slide button*/
+    .cycle-prev, .cycle-next {position: absolute; top:40%; font-size: 140%;
+    background-color: rgba(0, 0, 0, 0.4);color:#FFF;
+    padding: 0 5px;
+    display: block; cursor: pointer;
+    z-index: 200; opacity: 0; transition: all 0.5s;}
+    .cycle-next {right:0}
+    .cycle-slideshow:hover .cycle-prev, 
+    .cycle-slideshow:hover .cycle-next {opacity: 1;}
+    /*Dots pager*/
+    .cycle-pager {position: absolute; top: 15px; width: 100%;
+    text-align: center;z-index: 300;}
+    .cycle-pager span {text-indent: -9999px; display: inline-block;
+    width: 7px; height: 7px; border-radius: 50%;
+    background-color: #FFF; margin: 0 4px;}
+    .cycle-pager .cycle-pager-active {background-color: #000;}
+    /*Read more button*/
+    .read-more {color: rgb(21, 148, 233);text-decoration: underline;}
+    .white-box .toggle-btn-visible {display: block;}
+    .white-box .toggle-target-hidden {display:none}
+    .white-box .toggle-target-expanded {display: block;}
+/*Ends image banner*/
+
+ /*the quotation box in here*/
+.quotation {padding: 50px 0;} 
+.quo-mark {
+    font-size: 700%; color: #faca43; font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.quote {
+    float:right; width: 45%; padding-right: 30px; box-sizing: border-box;
+    padding-top: 80px;}
+.table-area {
+    float: right; width: 55%;}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;}
+table th {
+    text-align: left; background-color: #faca43;
+    color: #FFF; rgba (0,0,0,5);}
+table th, table td {
+    border: 1px solid #faca43; padding: 10px;}
+table tr:nth-child(even) td{
+    background-color:blanchedalmond;
+}
+table tr :nth-child(2),
+table tr :nth-child(3) {
+    text-align: center;
+}
+table tbody tr:hover td { /*if dun add "td", it will not hover the colored rows*/
+    background-color: gainsboro;
+}
+/*If ur page has more than 1 table, then add a class name for each tab, then code table.class name in CSS*/
+
+.products {width: 50%;}
+.quantity {width: 15%;}
+.price {width: 35%;}
+/*ends the quotation box*/
+
+/*2 text columns here*/
+.container {
+    margin-left: auto;margin-right: auto; padding: 0 0 60px 0;
+    border-top: 2px solid #faca43; border-bottom: 2px solid #faca43;
+
+}
+.right-box {
+    width: 40%; float:left; padding: 60px 20px 20px 20px;
+    box-sizing: border-box; font-size: 70%;
+    background-color: #ffe18c;
+    background-image: radial-gradient(#f8e7b8,#facc4c)
+}
+.left-box {width: 60%; float: left; 
+    padding: 40px 40px 0 0; box-sizing: border-box;}
+.fix {clear: both}
+/*Ends 2 text columns*/
+
+/*2 images columns here*/
+.image-columns {
+    padding: 40px 0;
+    margin-left: auto;margin-right: auto;border-bottom: 2px solid #faca43;}
+.social-media, .data-analysis {width: 100%; animation: SlideDown 1s;}
+.topic {text-align: center;padding: 10px 30px;
+    background-color: #cfe7a2;animation: SlideDown 2s;}
+.mkt-topic {text-align: center;padding: 10px 30px;
+    background-color: #ffe18c;animation: SlideDown 2.5s;
+animation-iteration-count: 3;
+animation-direction: alternate-reverse;}
+.read-blog {margin-top: 0;}
+
+/*Ends 2 images columns*/
+
+/*Mutiple boxes*/
+.mutiple-boxes {display:flex; margin:30px auto 20px auto; 
+    justify-content: space-between;position: relative;}
+.why {flex: 2; order:3;}
+.how {flex: 1;order:2;margin-right: 30px;}
+.what {flex: 1;order:1;margin-right: 30px;}
+.sign-up-btn {padding: 10px 20px;color: #FFF; font-size: 120%;
+    background-color: #faca43; border-radius: 5px;
+    text-decoration: none;position: absolute;left: 45%;}
+.sign-up-btn:hover {color: #faca43; background-color: blanchedalmond;}
+.boxes-signup {padding: 20px 0;}
+/*Ends mutiple boxes*/
+
+/*Gallerry*/
+.gallery {padding: 70px 0 40px 0;}
+.gallery a {width:25%; float: left;padding-right: 5px;
+    box-sizing: border-box;margin-bottom: 5px;}
+.gallery img {display: block;transition: all 0.3s ease-in-out;}
+.gallery:hover img {opacity: .7; transform: scale(0.9);}
+.gallery:hover img:hover {opacity: 1; transform: scale(1);
+transform: rotate(3deg);
+box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);}
+
+/*The last section with map and contact form*/
+.contact-line {border-top: 2px solid #faca43;padding: 30px 0;}
+.last-section {
+    padding: 30px 0;
+    margin-right: auto; margin-left: auto;}
+form {
+    background-color: blanchedalmond; padding: 30px 30px;
+}
+input, textarea {font-family: Arial, Helvetica, sans-serif;font-size: 100%;}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea
+ {  width: 100%;
+    display: block; box-sizing: border-box;
+    padding: 5px 10px; height: 30px;
+    margin-bottom: 15px; border: 1px solid lightgrey;
+    outline: none; }
+    textarea {height: 95px;} /*override the height 3px above*/
+
+input[type="submit"] {
+    width: 100%;
+    display: block; box-sizing: border-box; border-radius: 3px;
+    background-color: #faca43; color: #FFF;
+    padding: 10px 0; border: 1px solid blanchedalmond;
+    margin-top: 10px;
+}
+input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: burlywood;
+    border: 1px solid burlywood;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border: 1px solid burlywood;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.hidden-lable {
+    position:absolute;
+    height: 0; width: 0; overflow: hidden; visibility: hidden;}
+form {box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.2), 
+    inset 0 3px 10px rgba(0, 0, 0, 0.2);border-radius: 0 15px; }
+    /*You can add clockwise value to crop each angle of the box,
+    with square box, u can add 50% radius to crop a circle,
+    with triangle box, u can add 50% radius to crop an oval*/
+
+
+.last-image {width: 98%;}
+/*Ends the last section*/
+
+.bottom-footer{text-align: center; padding-top: 40px;}
+
+/*Grid*/
+.col {float: left;padding-right: 20px; box-sizing: border-box;}
+.col-md-4 {width: 40%;}
+.col-md-1 {width:20%;}
+.col-md-5 {width: 50%;}
+/*Ends grid*/
+
+/*Code for mobile & tablet device*/
+@media screen and (max-width: 600px) {
+    .white-box {padding-left: 20px; padding-right: 20px;padding-top: 20px;}
+    .bottom-footer {display: none;}
+    .site-nav li {width:30%; margin-right: 5px;} /*When coding for smaller screen, change the width of navigation to change the link incons to 2 rows or 3 rows*/
+    .site-nav a {padding: 5px 0; text-align: center;}
+    .icons {margin-top: 5px;}
+    .corgi-post {padding-left: 0;}
+    .col {padding-top: 20px;}
+    .last-section img {width: 100%;}
+    .banner-description, .corgi-post, 
+    .table-area, .quote,
+    .left-box, .right-box,
+    .col
+     {width: auto; float: none;}
+    .mutiple-boxes {display: block;} /*research this more since the 3 boxes place in wrong order*/
+    .toggle-btn-visible {display: block;}
+    .toggle-target-hidden {display:none}
+    .toggle-target-expanded {display: block;}
+}
+
+/*Animations*/
+@keyframes SlideDown {
+    0% {opacity: 0;transform: translateY(-100%);}
+    100% {opacity: 1;transform: translateY(0);}
+    /*If using keyframe for firefox/ explorer let add in "-webkit" before keyframe & animation lines*/
+}
+/*Ends animations*/
+
+    
+
+
