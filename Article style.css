@@ -2,7 +2,7 @@ html {
     background-color: #f1ce6b;}
 header {
     margin: 0;padding: 40px 40px;
-    background: #FFF url(../images/Web\ cover\ 1.jpg) top no-repeat;
+    background: #FFF url(../My-trial-web/images/Web\ cover\ 1.jpg) top no-repeat;
     /*We can add in mutiple backgrounds using commas ,*/
     background-position: top; 
     background-size: 100%;
@@ -83,7 +83,7 @@ animation: SlideDown 1s;
     display: block; text-decoration: none;
     width: 40px; height: 40px;
     background-position: top left;
-    background-image: url(../images/icons-01.png);
+    background-image: url(../My-trial-web/images/icons-01.png);
     text-indent: -9999px; 
     background-repeat: no-repeat; 
 }
